@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>fea28a4c-ec42-4528-b03c-6f9ae8dee65c</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>FastSearcher</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Ads\Ad.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Entities\Engine.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Manager\EngineListManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Manager\FileManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Support\EmailHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Support\LanguageHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Support\MarketplaceHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Support\SiteHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Support\SpeechHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Support\TileHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Classes\Support\TwitterHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Files\engines.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\IconicTileMediumLarge.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\IconicTileSmall.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWide.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideBing.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideDailyMotion.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideDuckDuckGo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideEcosia.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideGoodSearch.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideGoogle.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideLycos.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideMeltwater.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideMojeek.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideWikipedia.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideYahoo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Large\FlipCycleTileWideYoutube.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMedium.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumBing.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumDailyMotion.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumDuckDuckGo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumEcosia.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumGoodSearch.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumGoogle.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumLycos.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumMeltwater.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumMojeek.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumWikipedia.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumYahoo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Medium\FlipCycleTileMediumYoutube.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmall.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallBing.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallDailyMotion.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallDuckDuckGo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallEcosia.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallGoodSearch.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallGoogle.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallLycos.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallMeltwater.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallMojeek.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallWikipedia.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallYahoo.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Images\Tiles\Small\FlipCycleTileSmallYoutube.png" />
+  </ItemGroup>
+</Project>

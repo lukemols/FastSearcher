@@ -1,0 +1,88 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="FastSearcher81.InfoPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="15,20,0,10">
+            <TextBlock Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.ApplicationTitle}"
+                       FontSize="25"  Margin="12, 5, 12, 0"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <phone:Pivot>
+                <phone:PivotItem Header="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.InfoHeader}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border BorderThickness="1" BorderBrush="Black">
+                            <Image Source="Assets/Logo.png" Margin="20,20"/>
+                        </Border>
+                        <StackPanel Orientation="Vertical" Grid.Column="1">
+                            <TextBlock Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.ApplicationTitle}"
+                                       FontSize="28" FontWeight="Bold" Margin="15,10,0,0"/>
+                            <TextBlock x:Name="AuthorTB" Text="Luca Mollo" FontSize="28" Margin="15,10,0,0"/>
+                            <TextBlock x:Name="VersionTB" Text="version" FontSize="28" FontStyle="Italic" Margin="15,10,0,0"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical" Grid.Row="1" Grid.ColumnSpan="2">
+                            <Button x:Name="ContactButton" Margin="10, 15, 10, 0" Height="Auto" FontSize="26"
+                                    Content="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.ContactText}" 
+                                    Click="ContactButton_Click"/>
+                            <Button x:Name="ReviewButton" Margin="10, 15, 10, 0" Height="Auto" FontSize="26"
+                                    Content="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.ValutationText}" 
+                                    Click="ReviewButton_Click" />
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.ColumnSpan="2"
+                                    HorizontalAlignment="Center">
+                            <Rectangle x:Name="TwitterButton" Width="75" Height="75"
+                                VerticalAlignment="Center" Margin="40,10,40,10" Tap="TwitterButton_Tap">
+                                <Rectangle.Fill>
+                                    <ImageBrush x:Name="twitterRectImageBrush"/>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Rectangle x:Name="WebButton" Width="75" Height="75" 
+                                VerticalAlignment="Center" Margin="40,10,40,10" Tap="WebButton_Tap">
+                                <Rectangle.Fill>
+                                    <ImageBrush x:Name="webRectImageBrush"/>
+                                </Rectangle.Fill>
+                            </Rectangle>
+                        </StackPanel>
+                    </Grid>
+                </phone:PivotItem>
+                
+                <phone:PivotItem Header="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.DisclaimerText}">
+                    <TextBlock TextWrapping="Wrap" FontSize="25" ScrollViewer.VerticalScrollBarVisibility="Auto"
+                               Text="{Binding Source={StaticResource LocalizedStrings}, Path=LocalizedResources.DisclaimerMessage}"/>
+                </phone:PivotItem>
+                
+            </phone:Pivot>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
